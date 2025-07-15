@@ -6,7 +6,14 @@ st.text('Healthcare Explorer Database Viewer: NOT real patient data, just a demo
 conn = sqlite3.connect('../backend/healthcare.db')
 cursor = conn.cursor()
 
-cursor.execute("SELECT * FROM Patients LIMIT 10")
+query = """
+    SELECT patient_id, name, gender, birth_date
+    FROM Patients
+    GROUP BY name, gender, birth_date
+    LIMIT 10
+"""
+
+cursor.execute(query)
 rows = cursor.fetchall()
 
 col_names = [description[0] for description in cursor.description]

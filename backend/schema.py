@@ -15,9 +15,9 @@ def create_table():
         birth_date DATE
     );
 
-    CREATE TABLE IF NOT EXISTS Conditions (
+     CREATE TABLE IF NOT EXISTS Conditions (
         condition_id INTEGER PRIMARY KEY AUTOINCREMENT,
-        condition_name TEXT
+        name TEXT NOT NULL
     );
                 
     CREATE TABLE IF NOT EXISTS Medications (
