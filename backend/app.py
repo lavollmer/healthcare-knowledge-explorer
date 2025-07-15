@@ -5,10 +5,6 @@ import os
 
 app = Flask(__name__)
 
-uri='neo4j://localhost:5173'
-username = USERNAME
-password= PASSWORD
-
 load_status = dotenv.load_dotenv()
 if not load_status:
     print("Failed to load environment variables.")
