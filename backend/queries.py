@@ -1,4 +1,3 @@
-import pandas as pd
 from db_config import get_connection
 
 

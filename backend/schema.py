@@ -7,20 +7,26 @@ def create_table():
     # Cursor object to execute SQL commands
     cursor = conn.cursor()
 
-    cursor.execute('''
-        CREATE TABLE IF NOT EXISTS Patients (
-            patient_id INTEGER PRIMARY KEY,
-            name TEXT,
-            gender TEXT,
-            birth_date DATE
-        );
+    cursor.executescript('''
+    CREATE TABLE IF NOT EXISTS Patients (
+        patient_id INTEGER PRIMARY KEY,
+        name TEXT,
+        gender TEXT,
+        birth_date DATE
+    );
 
-        CREATE TABLE IF NOT EXISTS Conditions (
-            condition_id INTEGER PRIMARY KEY,
-            name TEXT
-        )
-        
-        -- Repeat for Treatments, Patient_Treatments, Side_Effects
+    CREATE TABLE IF NOT EXISTS Conditions (
+        condition_id INTEGER PRIMARY KEY,
+        name TEXT
+    )
+                
+    CREATE TABLE IF NOT EXISTS Medications (
+        medication_id INTEGER PRIMARY KEY,
+        brand_name TEXT,
+        generic_name TEXT,
+        dosage_form TEXT
+    );
+
         ''')
 
     conn.commit()
