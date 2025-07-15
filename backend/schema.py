@@ -16,12 +16,12 @@ def create_table():
     );
 
     CREATE TABLE IF NOT EXISTS Conditions (
-        condition_id INTEGER PRIMARY KEY,
-        name TEXT
+        condition_id INTEGER PRIMARY KEY AUTOINCREMENT,
+        condition_name TEXT
     );
                 
     CREATE TABLE IF NOT EXISTS Medications (
-        medication_id INTEGER PRIMARY KEY,
+        medication_id INTEGER PRIMARY KEY AUTOINCREMENT,
         brand_name TEXT,
         generic_name TEXT,
         dosage_form TEXT
