@@ -9,7 +9,7 @@ def create_table():
 
     cursor.executescript('''
     CREATE TABLE IF NOT EXISTS Patients (
-        patient_id INTEGER PRIMARY KEY,
+        patient_id INTEGER PRIMARY KEY AUTOINCREMENT,
         name TEXT,
         gender TEXT,
         birth_date DATE

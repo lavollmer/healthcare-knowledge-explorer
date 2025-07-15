@@ -1,7 +1,7 @@
 import streamlit as st
 import sqlite3
 
-st.text('Healthcare Explorer')
+st.text('Healthcare Explorer Database Viewer: NOT real patient data, just a demo!')
 
 conn = sqlite3.connect('../backend/healthcare.db')
 cursor = conn.cursor()
