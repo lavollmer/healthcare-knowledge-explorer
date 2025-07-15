@@ -3,10 +3,10 @@ import sqlite3
 
 st.text('Healthcare Explorer')
 
-conn = sqlite3.connect('../db/healthcare.db')
+conn = sqlite3.connect('../backend/healthcare.db')
 cursor = conn.cursor()
 
-cursor.execute("SELECT * FROM healthcare_data LIMIT 10")
+cursor.execute("SELECT * FROM Patients LIMIT 10")
 rows = cursor.fetchall()
 
 col_names = [description[0] for description in cursor.description]
