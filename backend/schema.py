@@ -18,7 +18,7 @@ def create_table():
     CREATE TABLE IF NOT EXISTS Conditions (
         condition_id INTEGER PRIMARY KEY,
         name TEXT
-    )
+    );
                 
     CREATE TABLE IF NOT EXISTS Medications (
         medication_id INTEGER PRIMARY KEY,
