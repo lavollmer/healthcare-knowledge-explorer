@@ -5,14 +5,14 @@ import os
 
 app = Flask(__name__)
 
-URL=
-AUTH=
+uri='neo4j://localhost:5173'
+username = USERNAME
+password= PASSWORD
 
-# Verify connectivity of Neo4j database
-with GraphDatabase.driver(URL, auth=AUTH) as driver:
-    driver.verify_connectivity()
-    print("Connected to Neo4j database successfully!")
-
+load_status = dotenv.load_dotenv()
+if not load_status:
+    print("Failed to load environment variables.")
+    exit(1)
 
 @app.route('/')
 def home():
